@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       // JavaScript to toggle the dropdown menus
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", () => {
+        dropdown.querySelector(".dropdown-content").classList.toggle("show");
+    });
+});
+
+// Close the dropdown menus if the user clicks outside
+window.onclick = function (event) {
+    if (!event.target.matches(".dropdown")) {
+        const dropdowns = document.querySelectorAll(".dropdown-content");
+        dropdowns.forEach((dropdownContent) => {
+            if (dropdownContent.classList.contains("show")) {
+                dropdownContent.classList.remove("show");
+            }
+        });
+    }
+};
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>About Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li  <div class="dropdown" style="padding: 0 0px 0 125px;">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                    <a href="video.html">Videos</a>
+                    <a href="profile.html">Images</a>
+                    <li><a href="news.html">News</a></li>
+                </div></li>
+        </ul>
+    </div>
+    <header>About Me</header>
+    <main>
+        <h1>About Me</h1>
+        <p>Welcome to my "About Me" page. Here's a bit about myself:</p>
+        
+        <h2>Jared Aeron Ellasos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, lorem nec tincidunt suscipit, metus lorem vehicula est, non feugiat nunc urna id urna. Nulla eu feugiat lorem. Pellentesque bibendum odio at sapien dignissim, id pharetra ipsum interdum. Nulla facilisi.</p>
+        
+        <p>Curabitur sit amet cursus justo. Vestibulum vel leo in tellus tempus dignissim. Sed sed volutpat purus. Cras facilisis varius libero, id congue odio vehicula et. Nullam dignissim, arcu nec egestas ullamcorper, tortor arcu vehicula ligula, quis ultricies ante purus in velit.</p>
+                
+        <p>Donec ullamcorper, ante nec sodales mattis, massa orci volutpat massa, quis vulputate ex urna non erat. Phasellus luctus ac erat non congue. Vestibulum euismod diam eu aliquet malesuada. In quis justo id nisl auctor cursus. Fusce elementum efficitur arcu, at efficitur odio varius eget. Fusce congue, velit eu bibendum facilisis, purus lectus facilisis tortor, nec fringilla velit est non tellus.</p>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 JADE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

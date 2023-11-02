@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // JavaScript to toggle the dropdown menus
+ const dropdowns = document.querySelectorAll(".dropdown");
+ 
+ dropdowns.forEach((dropdown) => {
+     dropdown.addEventListener("click", () => {
+         dropdown.querySelector(".dropdown-content").classList.toggle("show");
+     });
+ });
+ 
+ // Close the dropdown menus if the user clicks outside
+ window.onclick = function (event) {
+     if (!event.target.matches(".dropdown")) {
+         const dropdowns = document.querySelectorAll(".dropdown-content");
+         dropdowns.forEach((dropdownContent) => {
+             if (dropdownContent.classList.contains("show")) {
+                 dropdownContent.classList.remove("show");
+             }
+         });
+     }
+ };
+ 
+     </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li  <div class="dropdown" style="padding: 0 0px 0 125px;">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                    <a href="video.html">Videos</a>
+                    <a href="profile.html">Images</a>
+                    <li><a href="news.html">News</a></li>
+                </div></li>
+        </ul>
+    </div>
+    <header>Home</header>
+    <main>
+        <h1>Welcome to My Website</h1>
+        <p>This is the main content area.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 JADE . All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

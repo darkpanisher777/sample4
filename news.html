@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // JavaScript to toggle the dropdown menus
+        const dropdowns = document.querySelectorAll(".dropdown");
+        
+        dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener("click", () => {
+                dropdown.querySelector(".dropdown-content").classList.toggle("show");
+            });
+        });
+        
+        // Close the dropdown menus if the user clicks outside
+        window.onclick = function (event) {
+            if (!event.target.matches(".dropdown")) {
+                const dropdowns = document.querySelectorAll(".dropdown-content");
+                dropdowns.forEach((dropdownContent) => {
+                    if (dropdownContent.classList.contains("show")) {
+                        dropdownContent.classList.remove("show");
+                    }
+                });
+            }
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>News Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown" style="padding: 0 0px 0 125px;">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                    <a href="video.html">Videos</a>
+                    <a href="profile.html">Images</a>
+                    <li><a href="news.html">News</a></li>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <header>News</header>
+    <main>
+        <h1>Welcome to the News Page</h1>
+        <p>This is the news content area.</p>
+
+        <!-- Embedded Facebook Post or Content -->
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialISPSCPage%2Fposts%2Fpfbid0JYKC9T4x9sZm9e7cD5Xp6KhTDmjRAZ8eA9hBcGaKca31aUUkWrScoydYhePKi7Aul&show_text=true&width=500" width="500" height="645" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>    
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialISPSCPage%2Fposts%2Fpfbid0fTt4wNyBKfBYrXLfcybUFveEahczF1ZJ6UJ6WsDbDdbb1GRENA3D6y8ek1S4Neml&show_text=true&width=500" width="500" height="616" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialISPSCPage%2Fposts%2Fpfbid0Ltpx628LTVW3rpetPJZiwh4M4yFw42MJFnxmkcUBFdhNjLXRo9Nyc4SATXQa5nerl&show_text=true&width=500" width="500" height="699" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialISPSCPage%2Fposts%2Fpfbid0P46EjFAjTQNiR41NDnXvtonBcPhMhw6GgnUVceE9eARLuhPPBxsbkRYwpMU4ZjLZl&show_text=true&width=500" width="500" height="686" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </main>
+        <footer>
+
+        <p>&copy; 2023 JADE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

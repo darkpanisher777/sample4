@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // JavaScript to toggle the dropdown menus
+ const dropdowns = document.querySelectorAll(".dropdown");
+ 
+ dropdowns.forEach((dropdown) => {
+     dropdown.addEventListener("click", () => {
+         dropdown.querySelector(".dropdown-content").classList.toggle("show");
+     });
+ });
+ 
+ // Close the dropdown menus if the user clicks outside
+ window.onclick = function (event) {
+     if (!event.target.matches(".dropdown")) {
+         const dropdowns = document.querySelectorAll(".dropdown-content");
+         dropdowns.forEach((dropdownContent) => {
+             if (dropdownContent.classList.contains("show")) {
+                 dropdownContent.classList.remove("show");
+             }
+         });
+     }
+ };
+ 
+     </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Video Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li  <div class="dropdown" style="padding: 0 0px 0 125px;">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                <a href="video.html">Videos</a>
+                <a href="profile.html">Images</a>
+                <li><a href="news.html">News</a></li>
+                </div></li>
+        </ul>
+    </div>
+    <header>Video</header>
+    <main>
+        <h1>Welcome to the Video Page</h1>
+        <p>This is the video content area.</p>
+        <div class="video-container">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Blue Beetle 2023</h2>
+            <p>Description for Video 1 goes here.</p>
+        </div>
+        
+        <!-- Second Video Placeholder -->
+        <div class="video-container">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Video Title 2</h2>
+            <p>Description for Video 2 goes here.</p>
+        </div>
+        
+        <!-- Third Video Placeholder -->
+        <div class="video-container">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Video Title 3</h2>
+            <p>Description for Video 3 goes here.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 JADE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

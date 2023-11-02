@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .image-row img {
+            width: 200px;
+            height: auto;
+            margin: 0 5px; /* Reduced margin here */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // JavaScript for the dropdown menus (unchanged)
+        const dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener("click", () => {
+                dropdown.querySelector(".dropdown-content").classList.toggle("show");
+            });
+        });
+        window.onclick = function (event) {
+            if (!event.target.matches(".dropdown")) {
+                const dropdowns = document.querySelectorAll(".dropdown-content");
+                dropdowns.forEach((dropdownContent) => {
+                    if (dropdownContent.classList.contains("show")) {
+                        dropdownContent.classList.remove("show");
+                    }
+                });
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Profile Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown" style="padding: 0 0px 0 125px;">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                    <a href="video.html">Videos</a>
+                    <a href="profile.html">Images</a>
+                    <li><a href="news.html">News</a></li>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <header>Profile</header>
+    <main>
+        <h1>Image Gallery</h1>
+        <div class="image-row">
+            <img src="assets/image/DL.jpg" alt="Image 1">
+            <img src="assets/image/cyrell.jpg" alt="Image 2">
+            <img src="assets/image/edna&ian.jpg" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="image4.jpg" alt="Image 4">
+            <img src="image5.jpg" alt="Image 5">
+            <img src="image6.jpg" alt="Image 6">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 JADE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
